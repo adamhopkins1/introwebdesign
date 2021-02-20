@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intro to HTML5 Final Project.</title>
+
+  <style>
+
+*{
+ box-sizing:border-box;
+}
+
+
+
+   .dropbtn {
+     background-color: #DC143C;
+     color: white;
+     padding: 16px;
+     font-size: 16px;
+     border: none;
+     cursor: pointer;
+ }
+
+
+ .dropbtn:hover, .dropbtn:focus {
+    background-color: #ffdb58;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.show {
+  display:block;
+}
+
+
+   .apples ol{
+     list-style-type:none;
+     padding-left:0;
+   }
+
+  .apple{
+    display:inline-block;
+  }
+
+  .apple a:after{
+    display:inline-block;
+    color:#800000;
+    font-size:20%;
+    font-weight:bold;
+    padding:0 3px;
+  }
+
+  .kelly{
+    display:inline-block;
+    padding-left:12px;
+    margin-bottom: 10px;
+  }
+
+  .fort{
+    padding-right:5px;
+    margin:1px;
+    display:inline-block;
+  }
+
+   .punch{
+     padding:5px;
+     margin:5px,0;
+   }
+
+   .train{
+     position:relative;
+     float:right;
+     right:755px;
+     bottom:55px;
+   }
+
+
+               container {
+               background-color: rgb(235, 64, 52);
+               width: 10%;
+               border-radius: 5px;
+             }
+
+
+       label {
+       padding-right: 10px;
+       font-size: 1rem;
+       }
+      }
+
+      span {
+      content: "\00A9";
+    }
+
+    @media screen and (max-width: 1200px) {
+    body{
+      width: 20%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <h1><strong>Adam Hopkins</strong></h1>
+  </header>
+
+  <nav class="apples">
+    <ol>
+      <h2>Best Films of 2020</h2>
+      <li class="apple"><span aria-label="1"><a href="https://www.youtube.com/watch?v=6sxCFZ8_d84" alt="trailer1">One</span></a></li>
+      <li class="apple"><span aria-label="2"><a href="https://www.youtube.com/watch?v=hjw_QTKr2rc" alt="trailer2">Two</span></a></li>
+      <li class="apple"><span aria-label="3"><a href="https://www.youtube.com/watch?v=KQ0gFidlro8" alt="trailer3">Three</a></li>
+      <li class="apple"><span aria-label="4"><a href="https://www.youtube.com/watch?v=BZ4o4jwSaHk" alt="trailer1">Overall Best Film of 2020.</span></a></li>
+    </ol>
+</nav>
+
+<br>
+
+<ul class="kelly">
+  <h1 class="fort"><strong>Favorite Foods</strong></h1>
+  <li class="punch"><a href="https://www.phillipsseafood.com/" alt="food1">Seafood</a></li>
+  <li class="punch"><a href="https://www.pfchangs.com/" alt="food2">Asian Foods</a></li>
+  <li class="punch"><a href="https://www.papajohns.com/" alt="food3">Pizza Cuisine</a></li>
+  <li class="punch"><a href="https://www.buffalowildwings.com/" alt="food4">Buffalo Wings</a></li>
+</ul>
+</ul>
+
+ <h1>Achievements</h1>
+    <label for="file">Progress in the course</label>(100%)<progress id="file" max="100" value="100"></progress>
+    <br>
+    <label for="file">Progress in the course</label>(20%)<progress id="file" max="100" value="20"></progress>
+    <br>
+    <label for="file">Progress in the course</label>(67%)<progress id="file" max="100" value="67"></progress>
+    <br>
+
+<h1><strong>More About Me</strong></h1>
+
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">About Me</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="about.html">1988-2010 (Cherry Hill)</a>
+  </div>
+</div>
+
+  <footer>
+
+  <h1><strong>Made In Baltimore <span>&#169;</span></strong></h1>
+
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117525.25352914074!2d-76.69144584382009!3d39.280762935678084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c803aed6f483b7%3A0x44896a84223e758!2sBaltimore%2C%20MD!5e0!3m2!1sen!2sus!4v1613788415911!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+<p class="train">This page was created by <a href="https://github.com/adamhopkins1">Adam Hopkins</a> and Colleen Van Lent.
+  <br>
+  To learn more about web design and web development, visit <a href="https://www.coursera.org/specializations/web-design">Intro to Web Design.</a>
+
+</footer>
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+
+    function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+  }
+}
+
+
+
+
+
+
+
+ </script>
+ <script src="https://www.google.com/maps/place/Baltimore,+MD/@39.2807629,-76.6914458,11.75z/data=!4m5!3m4!1s0x89c803aed6f483b7:0x44896a84223e758!8m2!3d39.2903848!4d-76.6121893?hl=en"></script>
+
+ </body>
+
+ </html>
